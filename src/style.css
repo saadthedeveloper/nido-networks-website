@@ -1,0 +1,19 @@
+/*GLOBAL RESET*/
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/***********************
+*     HERO SECTION     *
+***********************/
+#hero-section{
+  background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0) 30%, rgba(0,0,0,0) 70%, rgba(0,0,0,1)),
+  url('../public/hero-section-bg.webp');
+  background-size: cover;       /* makes the image cover the entire section */
+  background-position: center;  /* centers the image */
+  background-repeat: no-repeat; /* prevents tiling */
+  color: white;
+  height: 100vh;
+}
