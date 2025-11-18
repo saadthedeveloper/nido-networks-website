@@ -5,6 +5,14 @@
   margin: 0;
 }
 
+section{
+  height: 100vh;
+}
+
+body{
+  background-color: black;
+}
+
 /***********************
 *     HERO SECTION     *
 ***********************/
@@ -15,5 +23,4 @@
   background-position: center;  /* centers the image */
   background-repeat: no-repeat; /* prevents tiling */
   color: white;
-  height: 100vh;
 }
