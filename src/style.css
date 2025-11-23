@@ -25,16 +25,23 @@ body{
 ul{
   list-style: none;
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 /***********************
 *        NAVBAR        *
 ***********************/
 nav{
   display: flex;
   direction: column;
+  position: fixed;
+  border: 1px solid red;
 }
 
 .section-title{
-  width: 95vw;
+  width: 100vw;
   font-size: 20px;
   text-align: center;
   font-weight: 100;
@@ -42,10 +49,11 @@ nav{
 }
 
 .nav-icon {
-  position: relative;
+  position: absolute;
   width: 42px;
   height: 32px;
   cursor: pointer;
+
 }
 
 .nav-icon span {
