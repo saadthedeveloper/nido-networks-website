@@ -15,18 +15,14 @@
     rel="stylesheet">
 
 
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 
 </head>
 
 <body>
   <!-- NAVBAR -->
-  <header data-aos="fade"
-     data-aos-duration="1000">
+  <header>
     <h1 class="section-title">
-      Nido Network
+      Nido <span>Network</span>
     </h1>
     <label class="hamburger-menu">
       <input type="checkbox" />
@@ -44,13 +40,11 @@
   <!-- HERO SECTION -->
   <section id="hero-section">
 
-    <h2 class="hero-section-text" data-aos="fade"
-     data-aos-duration="1000">Reliable Networking Solutions for a Connected Future</h2>
-    <div class="scroll-container" data-aos="fade"
-     data-aos-duration="1000">
-     <div class="circle"></div>
+    <h2 class="hero-section-text">Reliable Networking Solutions for a Connected Future</h2>
+    <div class="scroll-container">
+     <div class="circle">
+     </div>
       <div class="line">
-        <div></div>
       </div>
       <p class="scroll-text">Scroll</p>
     </div>
@@ -66,9 +60,30 @@
 
   </section>
 
-<script>
-  AOS.init();
+
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible");
+        }
+      });
+    },
+    {
+      threshold: 0.5  // section is considered visible when 50% of it is on screen
+    }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+});
 </script>
+
 </body>
 
 </html>

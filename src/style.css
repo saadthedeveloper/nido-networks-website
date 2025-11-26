@@ -1,10 +1,20 @@
-/*GLOBAL RESET*/
+/***********************
+*      GLOBAL RESET     *
+* Reset box model,      *
+* padding, and margin   *
+* for all elements      *
+***********************/
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+/***********************
+*      GLOBAL SETTINGS  *
+* Section layout &      *
+* scroll snapping       *
+***********************/
 section {
   height: 100vh;
   scroll-snap-align: start;
@@ -26,12 +36,33 @@ ul {
   list-style: none;
 }
 
+/* Hide scrollbars in Webkit browsers */
 body::-webkit-scrollbar {
   display: none;
 }
 
+/***********************
+*   SECTION ANIMATIONS  *
+* Fade-in effect for    *
+* sections on scroll    *
+***********************/
+section {
+  opacity: 0;
+  transition: opacity 0.9s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+}
+
+/***********************
+*       VARIABLES       *
+* CSS custom properties *
+* for layout, colors,   *
+* and animations        *
+***********************/
 :root {
-  --bar-width: 30px;
+  --bar-width: 25px;
   --bar-height: 1px;
   --hamburger-gap: 6px;
   --foreground: #ffffff;
@@ -42,6 +73,7 @@ body::-webkit-scrollbar {
   --header-title-font-size: 24px;
   --header-title-font-weight: 100;
 }
+
 /***********************
 *        NAVBAR        *
 ***********************/
@@ -50,6 +82,8 @@ header{
   position: fixed;
   top: 0;
   width: 100vw;
+  z-index: 10;
+  padding-top: 15px;
 }
 
 .section-title{
@@ -58,6 +92,14 @@ header{
   text-align: center;
 }
 
+.section-title span{
+  background-color: rgba(0, 153, 255, 0.661);
+  color: black;
+  /* border: 1px solid red; */
+  border-radius: 10px;
+  padding: 0 10px;
+  font-weight: 700;
+}
 
 
 .hamburger-menu {
@@ -66,9 +108,8 @@ header{
   display: flex;
   flex-direction: column;
   gap: var(--hamburger-gap);
-  width: max-content;
   position: absolute;
-  top: var(--hamburger-margin);
+  top: 20px;
   right: var(--hamburger-margin);
   z-index: 2;
   cursor: pointer;
@@ -130,7 +171,7 @@ header{
   transition: translate var(--animation-timing);
   translate: 100%;
   padding: 0.5rem 1rem;
-  width: 40vw;
+  width: 20vw;
   padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
   color: var(--background);
   min-height: 100vh;
@@ -140,6 +181,17 @@ header{
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.sidebar nav{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .hamburger-menu:has(input:checked)+.sidebar {
@@ -149,9 +201,12 @@ header{
 .sidebar div{
  font-size:20pxpx;
  font-weight: var(--header-title-font-weight);
- border-bottom: 1px solid rgba(255, 255, 255, 0.229);
  padding-bottom: 5px;
  margin-bottom: 5px;
+}
+
+.sidebar div:hover{
+  cursor: pointer;
 }
 
 
@@ -196,35 +251,35 @@ header{
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.486);
+  border: 1px solid rgba(0, 153, 255, 0.661);
+  background-color: rgba(0, 153, 255, 0.661);
+  border-left: 1px solid #ffffffc9;
+  animation: rotation 2s infinite ease-in-out;
 
 }
+
+@keyframes rotation {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg);}
+  
+}
+
 
 .line{
   width: 1px;
   height: 60%;
-  background-color: rgba(255, 255, 255, 0.486);
-}
-
-.line div{
-  width: 1px;
-  height: 10%;
-  background-color: rgba(255, 255, 255, 0.695);
-  box-shadow: #ffffff;box-shadow: 
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 40px #fff; 
-  animation: vertical-line 3s infinite ease;
-  position: relative;
-}
-@keyframes vertical-line {
-  0%   { top: 0; }
-  50%  { top: 90%; opacity: 0;}
-  100% { top: 0; opacity: 1;}
+  background-color: rgba(0, 153, 255, 0.661);
 }
 
 .scroll-text{
   font-weight: 100;
   font-size: 20px;
 }
+
+
+
+
+
+
+
+
