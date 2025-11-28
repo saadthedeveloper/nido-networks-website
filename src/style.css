@@ -26,11 +26,11 @@ section {
 
 html {
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: black;
-  scroll-behavior: smooth;
   color: var(text-color);
   font-family: "Poppins", sans-serif;
 }
@@ -41,6 +41,10 @@ ul {
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+a{
+  text-decoration: none;
 }
 
 
@@ -136,7 +140,6 @@ header {
 .hamburger-menu::before,
 .hamburger-menu::after,
 .hamburger-menu input {
-
   content: "";
   width: var(--bar-width);
   height: var(--bar-height);
@@ -214,6 +217,9 @@ header {
   cursor: pointer;
 }
 
+.sidebar div a{
+  color: var(--text-color);
+}
 
 
 
