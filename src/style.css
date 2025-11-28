@@ -43,7 +43,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -84,7 +84,7 @@ section.visible {
   --hamburger-margin: 8px;
   --animation-timing: 600ms ease-in-out;
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
-  --font-size: 21px;
+  --font-size-mobile: 25px;
   --font-weight: 100;
   --blue: rgb(0, 135, 177);
   --text-color: rgb(255, 255, 255);
@@ -106,7 +106,7 @@ header {
 }
 
 .section-title {
-  font-size: calc(var(--font-size) + 4px);
+  font-size: calc(var(--font-size-mobile) + 4px);
   font-weight: var(--font-weight);
   text-align: center;
   color: var(--text-color);
@@ -147,8 +147,8 @@ header {
   border-radius: 9999px;
   transform-origin: left center;
   transition: opacity var(--animation-timing), width var(--animation-timing),
-  rotate var(--animation-timing), translate var(--animation-timing),
-  background-color var(--animation-timing);
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
 }
 
 .hamburger-menu input {
@@ -180,7 +180,7 @@ header {
   transition: translate var(--animation-timing);
   translate: 100%;
   padding: 0.5rem 1rem;
-  width: 20vw;
+  width: 100vw;
   padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
   color: var(--background);
   min-height: 100vh;
@@ -207,7 +207,7 @@ header {
 }
 
 .sidebar div {
-  font-size: var(--font-size);
+  font-size: var(--font-size-mobile);
   font-weight: var(--font-weight);
   padding-bottom: 5px;
   margin-bottom: 5px;
@@ -217,10 +217,14 @@ header {
   cursor: pointer;
 }
 
-.sidebar div a{
+.sidebar div a {
   color: var(--text-color);
 }
-
+@media (min-width: 1000px) {
+  .sidebar{
+    width: 20vw;
+  }
+}
 
 
 
@@ -231,19 +235,22 @@ header {
   background-color: black;
   background-image: url('../public/hero-background-img.jpg');
   background-repeat: no-repeat;
-  background-position: right center;
-  background-size: auto 100%;
+  background-position: center 30%; /**/
+  background-size: auto 30%;
+  width: 100vw;
   color: var(--text-color);
   display: flex;
-  justify-items: start;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .hero-section-text {
   font-weight: var(--font-weight);
-  font-size: var(--font-size);
-  width: 50vw;
+  font-size: var(--font-size-mobile);
+  width: 90vw;
+  /* border: 1px solid red; */
   text-align: center;
+  margin-bottom: 250px;/**/
 }
 
 .scroll-container {
@@ -274,5 +281,14 @@ header {
 
 .scroll-text {
   font-weight: var(--font-weight);
-  font-size: var(--font-size);
+  font-size: var(--font-size-mobile);
+}
+
+@media (min-width: 1000px) {
+  #hero-section {
+    background-size: auto 80%;
+    background-position: right center;
+    justify-items: start;
+  align-items: center;
+  }
 }
