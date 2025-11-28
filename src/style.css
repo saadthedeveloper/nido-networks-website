@@ -84,7 +84,7 @@ section.visible {
   --hamburger-margin: 8px;
   --animation-timing: 600ms ease-in-out;
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
-  --font-size-mobile: 25px;
+  --font-size-mobile: 22px;
   --font-weight: 100;
   --blue: rgb(0, 135, 177);
   --text-color: rgb(255, 255, 255);
