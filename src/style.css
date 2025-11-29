@@ -22,6 +22,18 @@ section {
   height: 100vh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+  width: 100vw;
+}
+
+.section-title{
+  font-size: calc(var(--font-size-mobile) + 4px);
+  font-weight: var(--font-weight);
+  text-align: center;
+  color: var(--text-color);
+  padding-top: calc(var(--logo-font-size) + 50px);
+  font-size: 80px;
+  font-weight: 100;
+  color:#ffffff20;
 }
 
 html {
@@ -76,18 +88,19 @@ section.visible {
 * and animations        *
 ***********************/
 :root {
-  --bar-width: 25px;
-  --bar-height: 1px;
+  --menu-bar-width: 25px;
+  --menu-bar-height: 1px;
   --hamburger-gap: 6px;
-  --foreground: #ffffff;
-  --background: white;
+  --menu-foreground: #ffffff;
+  --menu-background: white;
   --hamburger-margin: 8px;
-  --animation-timing: 600ms ease-in-out;
-  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+  --menu-animation-timing: 600ms ease-in-out;
+  --hamburger-height: calc(var(--menu-bar-height) * 3 + var(--hamburger-gap) * 2);
   --font-size-mobile: 22px;
   --font-weight: 100;
   --blue: rgb(0, 135, 177);
   --text-color: rgb(255, 255, 255);
+  --logo-font-size: calc(var(--font-size-mobile) + 4px);
 }
 
 
@@ -105,14 +118,14 @@ header {
   padding-top: 15px;
 }
 
-.section-title {
-  font-size: calc(var(--font-size-mobile) + 4px);
+.logo {
+  font-size: var(--logo-font-size);
   font-weight: var(--font-weight);
   text-align: center;
   color: var(--text-color);
 }
 
-.section-title span {
+.logo span {
   background-color: var(--blue);
   color: black;
   border-radius: 10px;
@@ -126,29 +139,29 @@ header {
   flex-direction: column;
   gap: var(--hamburger-gap);
   position: absolute;
-  top: 20px;
+  top: 27px;
   right: var(--hamburger-margin);
   z-index: 2;
   cursor: pointer;
 }
 
 .hamburger-menu:has(input:checked) {
-  --foreground: white;
-  --background: #333;
+  --menu-foreground: white;
+  --menu-background: #333;
 }
 
 .hamburger-menu::before,
 .hamburger-menu::after,
 .hamburger-menu input {
   content: "";
-  width: var(--bar-width);
-  height: var(--bar-height);
-  background-color: var(--foreground);
+  width: var(--menu-bar-width);
+  height: var(--menu-bar-height);
+  background-color: var(--menu-foreground);
   border-radius: 9999px;
   transform-origin: left center;
-  transition: opacity var(--animation-timing), width var(--animation-timing),
-    rotate var(--animation-timing), translate var(--animation-timing),
-    background-color var(--animation-timing);
+  transition: opacity var(--menu-animation-timing), width var(--menu-animation-timing),
+    rotate var(--menu-animation-timing), translate var(--menu-animation-timing),
+    background-color var(--menu-animation-timing);
 }
 
 .hamburger-menu input {
@@ -162,13 +175,13 @@ header {
 .hamburger-menu:has(input:checked)::before {
   rotate: 45deg;
   width: var(--x-width);
-  translate: 0 calc(var(--bar-height) / -2);
+  translate: 0 calc(var(--menu-bar-height) / -2);
 }
 
 .hamburger-menu:has(input:checked)::after {
   rotate: -45deg;
   width: var(--x-width);
-  translate: 0 calc(var(--bar-height) / 2);
+  translate: 0 calc(var(--menu-bar-height) / 2);
 }
 
 .hamburger-menu input:checked {
@@ -177,12 +190,12 @@ header {
 }
 
 .sidebar {
-  transition: translate var(--animation-timing);
+  transition: translate var(--menu-animation-timing);
   translate: 100%;
   padding: 0.5rem 1rem;
   width: 100vw;
   padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
-  color: var(--background);
+  color: var(--menu-background);
   min-height: 100vh;
   position: fixed;
   top: 0;
@@ -220,9 +233,14 @@ header {
 .sidebar div a {
   color: var(--text-color);
 }
+
 @media (min-width: 1000px) {
-  .sidebar{
+  .sidebar {
     width: 20vw;
+  }
+
+  .hamburger-menu {
+    top: 20px;
   }
 }
 
@@ -235,9 +253,8 @@ header {
   background-color: black;
   background-image: url('../public/hero-background-img.jpg');
   background-repeat: no-repeat;
-  background-position: center 30%; /**/
+  background-position: center 30%;
   background-size: auto 30%;
-  width: 100vw;
   color: var(--text-color);
   display: flex;
   justify-content: center;
@@ -248,9 +265,8 @@ header {
   font-weight: var(--font-weight);
   font-size: var(--font-size-mobile);
   width: 90vw;
-  /* border: 1px solid red; */
   text-align: center;
-  margin-bottom: 250px;/**/
+  margin-bottom: 250px;
 }
 
 .scroll-container {
@@ -288,7 +304,21 @@ header {
   #hero-section {
     background-size: auto 80%;
     background-position: right center;
-    justify-items: start;
-  align-items: center;
+    justify-content: flex-start;
+    align-items: center;
   }
+
+  .hero-section-text {
+    margin-bottom: 0;
+    width: 50vw;
+  }
+
 }
+
+/***********************
+*       ABOUT US       *
+***********************/ 
+
+
+/* color:#ffffff00; 
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.188); */
