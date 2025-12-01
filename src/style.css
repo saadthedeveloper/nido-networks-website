@@ -321,7 +321,7 @@ header {
 #about-section{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .stats{
@@ -345,5 +345,20 @@ header {
 }
 
 .about-text{
-  width: 65vw;
+  width: 60vw;
+  height: 80vh;
+  color: white;
+  text-align: left;
+  font-weight: var(--font-weight);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
 }
+
+.about-text img{
+  width: 200px;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+

@@ -42,8 +42,8 @@
 
     <h2 class="hero-section-text">Reliable Networking Solutions for a Connected Future</h2>
     <div class="scroll-container">
-     <div class="circle">
-     </div>
+      <div class="circle">
+      </div>
       <div class="line">
       </div>
       <p class="scroll-text">Scroll</p>
@@ -67,8 +67,8 @@
       </div>
     </div>
     <div class="about-text">
-      <p></p>
-      <img src="" alt="">
+      <p>Nido Networks delivers advanced networking solutions that help businesses connect, communicate, and collaborate. Our 35 experts specialize in network design, cybersecurity, cloud integration, and infrastructure optimization, supporting over 150 clients from startups to enterprises. Based in Kista, Stockholm, we provide world-class solutions built for modern business needs.</p>
+      <img src="public/developer-coworker-overseeing-data-center.jpg" alt="">
     </div>
   </section>
 
@@ -79,27 +79,27 @@
 
 
   <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll("section");
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll("section");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        } else {
-          entry.target.classList.remove("visible");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            } else {
+              entry.target.classList.remove("visible");
+            }
+          });
+        },
+        {
+          threshold: 0.5  // section is considered visible when 50% of it is on screen
         }
-      });
-    },
-    {
-      threshold: 0.5  // section is considered visible when 50% of it is on screen
-    }
-  );
+      );
 
-  sections.forEach((section) => observer.observe(section));
-});
-</script>
+      sections.forEach((section) => observer.observe(section));
+    });
+  </script>
 
 </body>
 
