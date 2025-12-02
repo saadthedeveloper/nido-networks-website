@@ -321,17 +321,18 @@ header {
 #about-section{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .stats{
   height: 80vh;
-  width: 27vw;
+  max-width: 40vw;
+  padding: 0 10px;
   background-color: white;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
 }
@@ -346,14 +347,10 @@ header {
 }
 
 .about-text{
-  width: 60vw;
-  height: 80vh;
+  width: 50vw;
   color: white;
   text-align: left;
   font-weight: var(--font-weight);
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   flex-direction: column;
 }
 
@@ -361,27 +358,4 @@ header {
   height: 60%;
 }
 
-.about-text img{
-  width: 200px;
-  height: 100%;
-  border: 5px solid var(--blue);
-  border-radius: 20px;
-  object-fit: cover;
-}
-
-.about-text .img-container{
-    height: 40%;
-    position:relative;
-}
-
-.about-text .img-container p{
-  position: absolute;
-  background-color: var(--blue);
-  color: black;
-  bottom: 0px;
-  height: min-content;
-  text-align: center;
-  border-radius: 0 0 20px 20px;
-  font-weight: 300;
-}
 
