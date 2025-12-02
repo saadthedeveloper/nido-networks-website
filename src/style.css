@@ -8,8 +8,30 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
+/***********************
+*       VARIABLES       *
+* CSS custom properties *
+* for layout, colors,   *
+* and animations        *
+***********************/
+:root {
+  --menu-bar-width: 25px;
+  --menu-bar-height: 1px;
+  --hamburger-gap: 6px;
+  --menu-foreground: #ffffff;
+  --menu-background: white;
+  --hamburger-margin: 8px;
+  --menu-animation-timing: 600ms ease-in-out;
+  --hamburger-height: calc(var(--menu-bar-height) * 3 + var(--hamburger-gap) * 2);
+  --font-size-mobile: 13px;
+  --font-weight: 100;
+  --blue: rgb(0, 135, 177);
+  --text-color: rgb(255, 255, 255);
+  --logo-font-size: calc(var(--font-size-mobile) + 4px);
+}
 
 
 
@@ -44,7 +66,7 @@ html {
 body {
   background-color: black;
   color: var(text-color);
-  font-family: "Poppins", sans-serif;
+  
 }
 
 ul {
@@ -59,7 +81,13 @@ a {
   text-decoration: none;
 }
 
+button{
+  padding: 10px 30px;
+  border-radius: 100px;
+  font-size: var(--font-size-mobile);
+  font-weight: var(--font-weight);
 
+}
 
 
 
@@ -81,27 +109,7 @@ section.visible {
 
 
 
-/***********************
-*       VARIABLES       *
-* CSS custom properties *
-* for layout, colors,   *
-* and animations        *
-***********************/
-:root {
-  --menu-bar-width: 25px;
-  --menu-bar-height: 1px;
-  --hamburger-gap: 6px;
-  --menu-foreground: #ffffff;
-  --menu-background: white;
-  --hamburger-margin: 8px;
-  --menu-animation-timing: 600ms ease-in-out;
-  --hamburger-height: calc(var(--menu-bar-height) * 3 + var(--hamburger-gap) * 2);
-  --font-size-mobile: 22px;
-  --font-weight: 100;
-  --blue: rgb(0, 135, 177);
-  --text-color: rgb(255, 255, 255);
-  --logo-font-size: calc(var(--font-size-mobile) + 4px);
-}
+
 
 
 
@@ -341,21 +349,21 @@ header {
   font-size: 36px;
 }
 
-.stats div span{
+.stats div p{
   font-size: var(--font-size-mobile);
   font-weight: var(--font-weight);
 }
 
 .about-text{
-  width: 50vw;
+  width: 45vw;
   color: white;
   text-align: left;
   font-weight: var(--font-weight);
+  font-size: var(--font-size-mobile);
+  display: flex;
   flex-direction: column;
+  gap: 60px ;
 }
 
-.about-text p{
-  height: 60%;
-}
 
 
