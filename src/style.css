@@ -33,6 +33,23 @@
   --logo-font-size: calc(var(--font-size-mobile) + 4px);
 }
 
+@media (min-width: 400px) {
+  :root {
+  --font-size-mobile: 17px;
+}  
+}
+
+@media (min-width: 500px) {
+  :root {
+  --font-size-mobile: 19px;
+}  
+}
+
+@media (min-width: 600px) {
+  :root {
+  --font-size-mobile: 22px;
+} 
+}
 
 
 /***********************
@@ -91,6 +108,8 @@ button{
 
 
 
+
+
 /***********************
 *   SECTION ANIMATIONS  *
 * Fade-in effect for    *
@@ -123,7 +142,10 @@ header {
   top: 0;
   width: 100vw;
   z-index: 10;
-  padding-top: 15px;
+  padding: 15px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
@@ -131,6 +153,7 @@ header {
   font-weight: var(--font-weight);
   text-align: center;
   color: var(--text-color);
+  margin: auto;
 }
 
 .logo span {
@@ -146,9 +169,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: var(--hamburger-gap);
-  position: absolute;
-  top: 27px;
-  right: var(--hamburger-margin);
+  position: relative;
   z-index: 2;
   cursor: pointer;
 }
