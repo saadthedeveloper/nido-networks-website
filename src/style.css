@@ -71,7 +71,7 @@ section {
   color: var(--text-color);
   /* margin-top: calc(var(--logo-font-size) + 50px); */
   font-size: 60px;
-  font-weight: 100;
+  font-weight: 700;
   color: #ffffff20;
   /* border: 1px solid red; */
 }
@@ -451,6 +451,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center; 
+  overflow: hidden;
 }
 
 .div3 {
@@ -458,16 +459,20 @@ header {
   grid-column-start: 1;
   grid-row-start: 2;
   color: white;
-  /* border-radius: 20px; */
   display: flex;
   align-items: center;
   font-size: var(--font-size-mobile);
-  padding-left: 10px;
+  padding-left: 30px;
   border-right: 1px solid rgba(255, 255, 255, 0.264);
 }
 .div3 ul li{
   font-weight: var(--font-weight);
 }
+
+.div3 ul {
+  list-style: disc;
+}
+
 
 .div2 img {
   width: 100%;
