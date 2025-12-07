@@ -503,6 +503,7 @@ header {
 .dot-active{
   transform: scale(1.8);
   background-color: #ffffff;
+  transition: 100ms;
 }
 
 .dot-active::after{
