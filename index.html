@@ -249,17 +249,17 @@
 const cards = document.querySelectorAll('.service-card');
 const dots = document.querySelectorAll('.pagination-container .dot');
 
-let currentActiveIndex = -1; // Track the current active index
+let currentActiveIndex = -1;
 
 const observer = new IntersectionObserver((entries) => {
-  // Filter only cards that are intersecting
-  const visibleEntries = entries.filter(entry => entry.isIntersecting);
+  // Filter only cards that are fully visible (100% intersection)
+  const fullyVisibleEntries = entries.filter(entry => 
+    entry.isIntersecting && entry.intersectionRatio >= 0.99 // 0.99 to account for rounding
+  );
 
-  if (visibleEntries.length > 0) {
-    // Sort by visible area
-    visibleEntries.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-    const mostVisible = visibleEntries[0];
+  if (fullyVisibleEntries.length > 0) {
+    // If multiple cards are fully visible, pick the first one
+    const mostVisible = fullyVisibleEntries[0];
     const index = [...cards].indexOf(mostVisible.target);
 
     // Only update if the index has actually changed
