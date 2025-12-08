@@ -212,10 +212,37 @@
         <div class="dot"></div>
         <div class="dot"></div>
         <div class="dot"></div>
-        <div class="dot"></div>  
+        <div class="dot"></div>
       </div>
     </div>
   </section>
+
+  <!-- CONTACT US -->
+  <section id="contact-section">
+    <h2 class="section-title">CONTACT</h2>
+    <form action="" class="form">
+      <input type="text" placeholder="Name">
+      <input type="email" name="email" id="email" placeholder="Email">
+      <input type="text" name="message" id="message" placeholder="Message">
+      <button>Submit</button>
+    </form>
+
+    <div class="contact-info">
+      <div class="timing">
+        <span class="icon"></span>
+        <h3>Business Hours</h3>
+        <ul>
+          <li>Monday-Friday: 9:00 - 18:00</li>
+          <li>Emergency Support Available</li>
+        </ul>
+      </div>
+
+      <div class="number">
+
+      </div>
+    </div>
+  </section>
+
 
 
   <script>
@@ -241,47 +268,47 @@
     });
 
 
-    
 
 
 
 
-const cards = document.querySelectorAll('.service-card');
-const dots = document.querySelectorAll('.pagination-container .dot');
 
-let currentActiveIndex = -1;
+    const cards = document.querySelectorAll('.service-card');
+    const dots = document.querySelectorAll('.pagination-container .dot');
 
-const observer = new IntersectionObserver((entries) => {
-  // Filter only cards that are fully visible (100% intersection)
-  const fullyVisibleEntries = entries.filter(entry => 
-    entry.isIntersecting && entry.intersectionRatio >= 0.99 // 0.99 to account for rounding
-  );
+    let currentActiveIndex = -1;
 
-  if (fullyVisibleEntries.length > 0) {
-    // If multiple cards are fully visible, pick the first one
-    const mostVisible = fullyVisibleEntries[0];
-    const index = [...cards].indexOf(mostVisible.target);
+    const observer = new IntersectionObserver((entries) => {
+      // Filter only cards that are fully visible (100% intersection)
+      const fullyVisibleEntries = entries.filter(entry =>
+        entry.isIntersecting && entry.intersectionRatio >= 0.99 // 0.99 to account for rounding
+      );
 
-    // Only update if the index has actually changed
-    if (index !== currentActiveIndex) {
-      // Remove active class from all dots
-      dots.forEach(dot => dot.classList.remove('dot-active'));
+      if (fullyVisibleEntries.length > 0) {
+        // If multiple cards are fully visible, pick the first one
+        const mostVisible = fullyVisibleEntries[0];
+        const index = [...cards].indexOf(mostVisible.target);
 
-      // Add active class to corresponding dot
-      dots[index].classList.add('dot-active');
-      
-      // Update tracked index
-      currentActiveIndex = index;
-    }
-  }
-}, {
-  threshold: Array.from({length: 101}, (_, i) => i / 100)
-});
+        // Only update if the index has actually changed
+        if (index !== currentActiveIndex) {
+          // Remove active class from all dots
+          dots.forEach(dot => dot.classList.remove('dot-active'));
 
-cards.forEach(card => observer.observe(card));
+          // Add active class to corresponding dot
+          dots[index].classList.add('dot-active');
+
+          // Update tracked index
+          currentActiveIndex = index;
+        }
+      }
+    }, {
+      threshold: Array.from({ length: 101 }, (_, i) => i / 100)
+    });
+
+    cards.forEach(card => observer.observe(card));
 
 
-    
+
 
 
 
