@@ -249,6 +249,8 @@
 const cards = document.querySelectorAll('.service-card');
 const dots = document.querySelectorAll('.pagination-container .dot');
 
+let currentActiveIndex = -1; // Track the current active index
+
 const observer = new IntersectionObserver((entries) => {
   // Filter only cards that are intersecting
   const visibleEntries = entries.filter(entry => entry.isIntersecting);
@@ -260,14 +262,20 @@ const observer = new IntersectionObserver((entries) => {
     const mostVisible = visibleEntries[0];
     const index = [...cards].indexOf(mostVisible.target);
 
-    // Remove active class from all dots
-    dots.forEach(dot => dot.classList.remove('dot-active'));
+    // Only update if the index has actually changed
+    if (index !== currentActiveIndex) {
+      // Remove active class from all dots
+      dots.forEach(dot => dot.classList.remove('dot-active'));
 
-    // Add active class to corresponding dot
-    dots[index].classList.add('dot-active');
+      // Add active class to corresponding dot
+      dots[index].classList.add('dot-active');
+      
+      // Update tracked index
+      currentActiveIndex = index;
+    }
   }
 }, {
-  threshold: Array.from({length: 101}, (_, i) => i / 100) // track partial visibility 0.0 → 1.0
+  threshold: Array.from({length: 101}, (_, i) => i / 100)
 });
 
 cards.forEach(card => observer.observe(card));
