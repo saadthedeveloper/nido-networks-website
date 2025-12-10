@@ -30,7 +30,7 @@
   --font-weight: 100;
   --blue: rgb(0, 135, 177);
   --text-color: rgb(255, 255, 255);
-  --logo-font-size: calc(var(--font-size-mobile) + 4px);
+  --logo-font-size: calc(var(--font-size-mobile) + 6px);
 }
 
 @media (min-width: 400px) {
@@ -525,22 +525,25 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
+
+
 .contact{
-  width: 100vw;
-  height: 70vh;
-  padding: 0 5px;
+  width: 60vw;
+  margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 12px;
 
 }
 
 .contact-card{
   border-radius: 20px;
-  background-color: #33333373;
+  background-color: transparent;
+  background-color: #16161600;
   border: 1px solid var(--blue);
   display: flex;
   align-items: center;
@@ -552,14 +555,18 @@ header {
 .contact-card div p{
   font-weight: var(--font-weight);
 }
+.contact-card div h4{
+  font-size: calc(var(--font-size-mobile) + 5px);
+  font-weight: 200;
+}
 
 .card-info{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 40%;
   width: 100%;
+  padding: 15px 0;
 }
 
 
