@@ -57,7 +57,7 @@
 * Section layout &      *
 * scroll snapping       *
 ***********************/
-section {
+section, footer{
   height: 100vh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -97,6 +97,11 @@ ul {
 
 a {
   text-decoration: none;
+  color: white;
+}
+
+a:visited{
+  color: white;
 }
 
 button {
@@ -544,7 +549,7 @@ header {
   border-radius: 20px;
   background-color: transparent;
   background-color: #16161600;
-  border: 1px solid var(--blue);
+  border: 1px solid rgba(255, 255, 255, 0.329);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -575,13 +580,35 @@ header {
   .lucide {
     width: 32px;  /* or any size you want */
     height: 32px;
-    stroke: #ffffff;  /* blue */
+    stroke: var(--blue);  /* blue */
+  stroke-width: 1;
+
   }
     
 
 
 
-/* #contact-section{
+
+
+
+/***********************
+*        FOOTER        *
+***********************/
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+
+}
+
+
+
+
+
+#contact-section{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -606,4 +633,69 @@ header {
   font-size: var(--font-size-mobile);
   color: white;
   font-weight: var(--font-weight);
-} */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.socials
+{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.social-icons
+{
+  padding: 13px;
+  background-color: #ffffff00;
+  border: 1px solid rgba(255, 255, 255, 0.39);
+  border-radius: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons svg{
+  stroke: var(--blue); 
+  stroke-width: 1;
+}
+
+
+
+
+
+
+
+
+
+
+.copyright{
+  width: 100vw;
+  border: 1px solid red;
+  height: 10vh;
+  color: white;
+  text-align: center;
+  font-size: var(--font-size-mobile);
+  font-weight: var(--font-weight);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  position: absolute;
+
+}
+
+.copyright span{
+  font-weight: 200
+}
