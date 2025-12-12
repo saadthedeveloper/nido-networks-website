@@ -587,7 +587,7 @@ header {
   height: 32px;
   stroke: var(--blue);
   /* blue */
-  stroke-width: 1;
+  stroke-width: 0.5;
 
 }
 
