@@ -48,9 +48,6 @@
 @media (min-width: 1000px) {
   :root {
     --logo-font-size: calc(var(--font-size-mobile) + 2px);
-
-  }
-  :root {
     --font-size-mobile: 15px;
   }
 }
@@ -373,19 +370,17 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  flex-direction: column;
+  flex-direction: row;
   
 }
 
-.about{
+/* .about{
   display: flex;
   justify-content: center;
   gap: 50px;
-  width: 100%;
-  border: 1px solid red;
   height: 80vh;
 
-}
+} */
 
 #about-section .section-title {
     display: none;
@@ -393,6 +388,7 @@ header {
 
 .stats {
   max-width: 40vw;
+  height: 80vh;
   padding: 0 10px;
   background-color: var(--blue);
   border-radius: 20px;
@@ -416,6 +412,7 @@ header {
 
 .about-text {
   width: 45vw;
+  height: 80vh;
   color: white;
   text-align: left;
   font-weight: var(--font-weight);
