@@ -498,6 +498,7 @@ header {
   justify-content: center;
   color: black;
   background-color: var(--blue);
+  font-size: calc(var(--font-size-mobile) + 1px);
 }
 
 .div2 {
@@ -645,7 +646,7 @@ header {
   justify-content: space-evenly;
 }
 
-#contact-section .section-title{
+#contact-section .section-title {
   display: none;
 }
 
@@ -713,9 +714,9 @@ header {
     gap: 12px;
   }
 
-  #contact-section .section-title{
-  display: block;
-}
+  #contact-section .section-title {
+    display: block;
+  }
 }
 
 
@@ -736,6 +737,17 @@ footer {
 
 }
 
+.about-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 30px;
+}
+
+.about {
+  display: none;
+}
+
 
 
 .form {
@@ -746,7 +758,6 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding: 20px 0;
 }
 
 .form input {
@@ -859,4 +870,30 @@ footer {
   font-size: calc(var(--font-size-mobile) + 5px);
   font-weight: 200;
   padding-left: 10px;
+}
+
+@media (min-width: 1000px) {
+
+  .about-form-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form {
+    width: 40%;
+  }
+
+  .about {
+    display: block;
+    width: 40%;
+  }
+
+  .about p {
+    font-weight: var(--font-weight);
+  }
+
+  .about h3{
+    font-size: calc(var(--font-size-mobile) + 10px);
+  }
+
 }
