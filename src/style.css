@@ -394,7 +394,7 @@ header {
 
 .stats {
   max-width: 40vw;
-  height: 75vh;
+  height: 80%;
   padding: 0 10px;
   background-color: var(--blue);
   border-radius: 20px;
@@ -416,27 +416,19 @@ header {
   font-weight: calc(var(--font-weight) + 100);
 }
 
-.about-text {
-  width: 45vw;
-  height: 75vh;
-  color: white;
-  text-align: left;
-  font-weight: var(--font-weight);
-  font-size: var(--font-size-mobile);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.about-container{
+  border: 1px solid red;
+  height: 80%;
 }
 
-.about-text a{
-  padding: 10px 30px;
-  border-radius: 100px;
-  font-size: var(--font-size-mobile);
-  font-weight: calc(var(--font-weight) + 100);
-  border: none;
-  background-color: white;
-  color: black;
-  text-align: center;
+.about-text{
+  color: white;
+  font-weight: var(--font-weight);
+}
+
+.team{
+  border: 1px solid red;
+  background-color: #333;
 }
 
 @media (min-width: 1000px) {
@@ -913,3 +905,19 @@ footer {
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
