@@ -109,13 +109,18 @@ a:visited {
   color: white;
 }
 
-button {
+button{
   padding: 10px 30px;
   border-radius: 100px;
   font-size: var(--font-size-mobile);
   font-weight: calc(var(--font-weight) + 100);
   border: none;
+  background-color: white;
+  color: black;
+  text-align: center;
 }
+
+
 
 
 
@@ -421,6 +426,17 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.about-text a{
+  padding: 10px 30px;
+  border-radius: 100px;
+  font-size: var(--font-size-mobile);
+  font-weight: calc(var(--font-weight) + 100);
+  border: none;
+  background-color: white;
+  color: black;
+  text-align: center;
 }
 
 @media (min-width: 1000px) {
