@@ -433,16 +433,20 @@ header {
 
 .team {
   /* border: 1px solid red; */
-  width: 90%;
-  height: 50%;
+  width: 80%;
+  height: 40%;
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  border: 1px solid red;
+  display: flex;
+
 }
 
 .member{
   scroll-snap-align: start;
   height: 100%;
+  max-width: 400px;
   flex: 0 0 100%;
   display: flex;
   flex-direction: column;
@@ -452,7 +456,6 @@ header {
 }
 
 .member img{
- background-color: #ffffff;
  display: block;
  width: 100%;
  height: 80%;
