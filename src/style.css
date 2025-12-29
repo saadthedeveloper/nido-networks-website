@@ -431,22 +431,44 @@ header {
   text-align: center;
 }
 
+
+
+/***********************
+*         TEAM         *
+***********************/
+
+#team-section{
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#team-section p{
+  border: 1px solid red;
+  color: white;
+}
+
+.team-wrapper{
+  width: 90%;
+  height: 50%;
+}
+
+
 .team {
-  /* border: 1px solid red; */
-  width: 80%;
-  height: 40%;
+  border: 1px solid red;
+  width: 100%;
+  height: 100%;
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  border: 1px solid red;
-  display: flex;
-
 }
 
 .member{
   scroll-snap-align: start;
   height: 100%;
-  max-width: 400px;
+  max-width: 500px;
   flex: 0 0 100%;
   display: flex;
   flex-direction: column;
@@ -467,8 +489,8 @@ header {
 
 .member div{
   width: 100%;
-  height: 20%;
-  /* border: 1px solid red; */
+  padding: 10px 0;
+  border: 1px solid red;
   color: white;
   display: flex;
   flex-direction: column;
@@ -485,6 +507,7 @@ header {
   font-weight: var(--font-weight);
   border-bottom: 1px solid rgba(255, 255, 255, 0.401);
   padding-bottom: 5px;
+  border: 1px solid red;
 
 }
 
@@ -496,6 +519,16 @@ header {
 
 
 
+}
+
+@media (min-width: 1350px){
+  .team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
 }
 
 /***********************
