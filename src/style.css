@@ -449,11 +449,13 @@ header {
   /* border: 1px solid red; */
   color: white;
   text-align: center;
+  font-weight: var(--font-weight);
+  width: 80%;
 }
 
 .team-wrapper{
   width: 90%;
-  height: 50%;
+  height: 45%;
   /* border: 1px solid blue; */
 }
 
@@ -495,7 +497,7 @@ header {
 .member div{
   width: 100%;
   padding: 10px 0;
-  /* border: 1px solid red; */
+  background-color: #00000061;
   color: white;
   display: flex;
   flex-direction: column;
@@ -553,7 +555,7 @@ header {
   text-align: center;
   font-weight: var(--font-weight);
   /* border: 1px solid red; */
-  width: 80vw;
+  width: 80%;
   font-size: var(--font-size-mobile);
 }
 
