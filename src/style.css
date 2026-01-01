@@ -451,6 +451,7 @@ header {
   text-align: center;
   font-weight: var(--font-weight);
   width: 80%;
+  font-size: var(--font-size-mobile);
 }
 
 .team-wrapper{
@@ -467,6 +468,7 @@ header {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  
 }
 
 .member{
@@ -506,6 +508,7 @@ header {
   text-align: center;
   position: absolute;
   bottom: 0;
+  font-size: var(--font-size-mobile);
 }
 
 .position{
