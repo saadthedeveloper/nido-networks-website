@@ -25,7 +25,7 @@
       Nido <span>Network</span>
     </h1>
 
-    
+
   </header>
 
   <!-- HERO SECTION -->
@@ -48,22 +48,25 @@
 
     <div class="stats">
       <div>
-        <h2>11</h2>
+        <h2>15</h2>
         <p>Years<br />Experience</p>
       </div>
       <div>
-        <h2>23</h2>
+        <h2>35</h2>
         <p>Skilled<br />Workers</p>
       </div>
       <div>
-        <h2>254</h2>
+        <h2>150</h2>
         <p>Projects<br />Completed</p>
       </div>
     </div>
 
     <div class="about-container">
-      <div class="about-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit maxime veniam, tenetur
-        incidunt magni recusandae dolorem deleniti ipsum in Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, animi odit alias atque fuga eveniet veritatis ut beatae sint, dolore cupiditate possimus fugiat officia expedita qui libero voluptatum et esse? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga harum minima consequuntur fugiat, aliquam quaerat commodi, dolor voluptatibus libero vero quibusdam, magnam at nesciunt nostrum possimus animi iusto accusantium accusamus?
+      <div class="about-text">Founded to transform networking infrastructure, Nido Networks delivers cutting-edge
+        solutions that help businesses connect, communicate, and collaborate more effectively. Our team of 35 experts
+        specializes in network design, cybersecurity, cloud integration, and infrastructure optimization, serving over
+        150 clients from startups to enterprises. Based in Kista, Stockholm - Sweden’s leading tech hub. We deliver
+        world-class networking solutions for modern businesses.
       </div>
     </div>
 
@@ -72,55 +75,7 @@
   </section>
 
 
-  <!-- TEAM -->
-  <section id="team-section">
-    <h2 class="section-title">TEAM</h2>
-    <p>At Nido Networks, we're all about providing value through cutting-edge technology and expert-driven solutions
-      that transform your digital infrastructure.
-    </p>
-    <div class="team-wrapper">
 
-      <div class="team">
-        
-        
-
-      <div class="member">
-        <img src="public/member-1.webp" alt="">
-        <div>
-          <span class="position">Cheif Executive Officer</span>
-          <span class="name">Nadeem Khan</span>
-        </div>
-      </div>
-
-      
-      
-      <div class="member">
-        <img src="public/member-2.webp" alt="">
-        <div>
-          <span class="position">Head Of Sales & Marketing</span>
-          <span class="name">Saad Ahmad</span>
-        </div>
-      </div>
-      
-      
-      <div class="member">
-        <img src="public/member-3.webp" alt="">
-        <div>
-          <span class="position">Embedded Networking Engineer</span>
-          <span class="name">Aimal Khan</span>
-        </div>
-      </div>
-      
-      
-      
-    </div>
-    <div class="team-pagination-container">
-        <div class="team-dot team-dot-active"></div>
-        <div class="team-dot"></div>
-        <div class="team-dot"></div>
-      </div>
-  </div>
-  </section>
 
 
 
@@ -264,19 +219,74 @@
             <div></div>
           </div>
         </div>
-<div class="pagination-container">
-        <div class="dot dot-active"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
+        <div class="pagination-container">
+          <div class="dot dot-active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
       </div>
 
-      
+
     </div>
   </section>
+
+
+
+  <!-- TEAM -->
+  <section id="team-section">
+    <h2 class="section-title">TEAM</h2>
+    <p>Behind Nido Networks is a passionate team of experts dedicated to building reliable, future-ready networking
+      solutions. We combine technical excellence with a collaborative mindset to help businesses grow and stay secure in
+      a connected world.
+    </p>
+    <div class="team-wrapper">
+
+      <div class="team">
+
+
+
+        <div class="member">
+          <img src="public/member-1.webp" alt="">
+          <div>
+            <span class="position">Cheif Executive Officer</span>
+            <span class="name">Nadeem Khan</span>
+          </div>
+        </div>
+
+
+
+        <div class="member">
+          <img src="public/member-2.webp" alt="">
+          <div>
+            <span class="position">Head Of Sales & Marketing</span>
+            <span class="name">Saad Ahmad</span>
+          </div>
+        </div>
+
+
+        <div class="member">
+          <img src="public/member-3.webp" alt="">
+          <div>
+            <span class="position">Embedded Networking Engineer</span>
+            <span class="name">Aimal Khan</span>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="team-pagination-container">
+        <div class="team-dot team-dot-active"></div>
+        <div class="team-dot"></div>
+        <div class="team-dot"></div>
+      </div>
+    </div>
+  </section>
+
+
 
   <!-- CONTACT US -->
   <section id="contact-section">
@@ -358,6 +368,7 @@
           infrastructure optimization. Based in Kista, Stockholm’s tech hub.</p>
       </div>
       <div class="form">
+        <h3>Send Us A Message</h3>
         <input type="text" placeholder="Name">
         <input type="email" name="email" id="email" placeholder="Email">
         <input type="text" name="message" id="message" placeholder="Message">
@@ -483,31 +494,31 @@
 
 
 
-const member = document.querySelectorAll('.member');
-const teamDots = document.querySelectorAll('.team-dot');
+    const member = document.querySelectorAll('.member');
+    const teamDots = document.querySelectorAll('.team-dot');
 
-const teamObserver = new IntersectionObserver((entries) => {
-  // Filter only cards that are intersecting
-  const visibleEntries = entries.filter(entry => entry.isIntersecting);
+    const teamObserver = new IntersectionObserver((entries) => {
+      // Filter only cards that are intersecting
+      const visibleEntries = entries.filter(entry => entry.isIntersecting);
 
-  if (visibleEntries.length > 0) {
-    // Sort by visible area
-    visibleEntries.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+      if (visibleEntries.length > 0) {
+        // Sort by visible area
+        visibleEntries.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
 
-    const mostVisible = visibleEntries[0];
-    const index = [...member].indexOf(mostVisible.target);
+        const mostVisible = visibleEntries[0];
+        const index = [...member].indexOf(mostVisible.target);
 
-    // Remove active class from all dots
-    teamDots.forEach(dot => dot.classList.remove('team-dot-active'));
+        // Remove active class from all dots
+        teamDots.forEach(dot => dot.classList.remove('team-dot-active'));
 
-    // Add active class to corresponding dot
-    teamDots[index].classList.add('team-dot-active');
-  }
-}, {
-  threshold: Array.from({ length: 101 }, (_, i) => i / 100)
-});
+        // Add active class to corresponding dot
+        teamDots[index].classList.add('team-dot-active');
+      }
+    }, {
+      threshold: Array.from({ length: 101 }, (_, i) => i / 100)
+    });
 
-member.forEach(card => teamObserver.observe(card));
+    member.forEach(card => teamObserver.observe(card));
 
   </script>
 
