@@ -33,6 +33,11 @@
   --logo-font-size: calc(var(--font-size-mobile) + 6px);
 }
 
+@media (min-width: 1000px) {
+  :root{
+      --font-size-mobile: 14px;
+  }
+}
 
 
 
@@ -110,6 +115,8 @@ button {
 
 
 
+
+
 /***********************
 *   SECTION ANIMATIONS  *
 * Fade-in effect for    *
@@ -177,7 +184,7 @@ header {
 ***********************/
 #hero-section {
   background-color: black;
-  background-image: url('../public/hero-background-img.jpg');
+  background-image: url('../public/hero-background-img.webp');
   background-repeat: no-repeat;
   background-position: center 30%;
   background-size: auto 30%;
@@ -314,6 +321,15 @@ header {
   text-align: center;
 }
 
+@media (min-width: 1000px) {
+  #about-section .section-title {
+    display: block;
+  }
+
+
+
+
+}
 
 
 /***********************
@@ -341,6 +357,8 @@ header {
   width: 80%;
   height: 50%;
   /* border: 2px solid blue; */
+  max-width: 250px;
+
 }
 
 
@@ -357,7 +375,6 @@ header {
 .member {
   scroll-snap-align: start;
   height: 100%;
-  /* max-width: 500px; */
   flex: 0 0 100%;
   display: flex;
   flex-direction: column;
@@ -445,25 +462,39 @@ header {
   border: 0.5px solid #ffffff67;
 }
 
-@media (min-width: 1000px) {
-  #about-section .section-title {
-    display: block;
+@media (min-width: 700px) {
+  .team-wrapper {
+    width: 100%;
+    max-width: none;
+    /* border: 1px solid red; */
   }
 
 
+  .team-pagination-container {
+    display: none;
+  }
 
-
-}
-
-@media (min-width: 1350px) {
   .team {
+    height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
 
   }
+
+  .member {
+    scroll-snap-align: none;
+    height: 100%;
+    width: 25%;
+    flex: none;
+
+  }
+
+
 }
+
+
 
 /***********************
 *       SERVICES       *
@@ -741,7 +772,7 @@ header {
 
 .contact-card:hover {
   background-color: #ffffff2f;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 
@@ -791,7 +822,7 @@ footer {
   display: none;
 }
 
-.form h3{
+.form h3 {
   color: gray;
   font-size: 30px;
 }
@@ -856,6 +887,12 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icons:hover {
+  transform: scale(1.1);
 }
 
 .social-icons svg {
